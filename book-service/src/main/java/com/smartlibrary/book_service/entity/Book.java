@@ -1,4 +1,4 @@
-package com.smartlibrary.bookservice.entity;
+package com.smartlibrary.book_service.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

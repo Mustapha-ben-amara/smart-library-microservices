@@ -1,7 +1,7 @@
-package com.smartlibrary.bookservice.controller;
+package com.smartlibrary.book_service.controller;
 
-import com.smartlibrary.bookservice.entity.Book;
-import com.smartlibrary.bookservice.service.BookService;
+import com.smartlibrary.book_service.entity.Book;
+import com.smartlibrary.book_service.service.BookService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

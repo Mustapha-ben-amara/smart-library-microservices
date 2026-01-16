@@ -1,7 +1,7 @@
-package com.smartlibrary.bookservice.service;
+package com.smartlibrary.book_service.service;
 
-import com.smartlibrary.bookservice.entity.Book;
-import com.smartlibrary.bookservice.repository.BookRepository;
+import com.smartlibrary.book_service.entity.Book;
+import com.smartlibrary.book_service.repository.BookRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

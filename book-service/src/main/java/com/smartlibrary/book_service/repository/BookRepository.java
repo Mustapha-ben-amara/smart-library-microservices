@@ -1,6 +1,6 @@
-package com.smartlibrary.bookservice.repository;
+package com.smartlibrary.book_service.repository;
 
-import com.smartlibrary.bookservice.entity.Book;
+import com.smartlibrary.book_service.entity.Book;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**

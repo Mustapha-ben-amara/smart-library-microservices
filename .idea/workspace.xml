@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a0e69fb3-0305-40b8-a62c-a83386533d88" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-service/src/main/java/com/smartlibrary/book_service/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/main/java/com/smartlibrary/book_service/controller/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-service/src/main/java/com/smartlibrary/book_service/entity/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/main/java/com/smartlibrary/book_service/entity/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-service/src/main/java/com/smartlibrary/book_service/repository/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/main/java/com/smartlibrary/book_service/repository/BookRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-service/src/main/java/com/smartlibrary/book_service/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/main/java/com/smartlibrary/book_service/service/BookService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book-service/src/main/resources/BookServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/src/main/java/com/smartlibrary/book_service/BookServiceApplication.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Mustapha-ben-amara"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Mustapha-ben-amara/smart-library-microservices.git",
+    "accountId": "87536e8e-6262-488d-add7-e3c9f332b9dd"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="38M9uBsEczmf2A78PKJDklPd4zW" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Most Amr\Documents\smart-library-microservices\book-service\src\main\java\com\smartlibrary\book_service" />
+    </key>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a0e69fb3-0305-40b8-a62c-a83386533d88" name="Changes" comment="" />
+      <created>1768598797434</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1768598797434</updated>
+    </task>
+    <servers />
+  </component>
+</project>
