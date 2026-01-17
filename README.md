@@ -13,6 +13,7 @@ Le projet inclut :
 - Initialisation des données avec `CommandLineRunner`
 - Tests via Postman ou curl
 - Architecture prête pour Docker et CI/CD
+- 
 
 ---
 
