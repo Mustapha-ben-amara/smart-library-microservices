@@ -1,8 +1,10 @@
 package com.smartlibrary.client.service;
 
-import com.smartlibrary.client.dto.BookDTO;
+import com.smartlibrary.client.dto.BookDto;
 import com.smartlibrary.client.feign.BookClient;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * Service métier Client
@@ -22,7 +24,12 @@ public class ClientService {
     /**
      * Appelle le Book Service pour récupérer un livre
      */
-    public BookDTO getBookByIsbn(String isbn) {
+    public BookDto getBookByIsbn(String isbn) {
         return bookClient.getBookByIsbn(isbn);
+    }
+
+
+    public List<BookDto> getAvailableBooks() {
+        return bookClient.getAllBooks();
     }
 }

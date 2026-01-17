@@ -1,4 +1,4 @@
-package com.smartlibrary.client.entity;
+/*package com.smartlibrary.client.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -8,6 +8,8 @@ import jakarta.persistence.Id;
 /**
  * Entité représentant un client de la bibliothèque.
  */
+
+/*
 @Entity
 public class Client {
 
@@ -27,3 +29,5 @@ public class Client {
     public String getNom() { return nom; }
     public void setNom(String nom) { this.nom = nom; }
 }
+
+*/

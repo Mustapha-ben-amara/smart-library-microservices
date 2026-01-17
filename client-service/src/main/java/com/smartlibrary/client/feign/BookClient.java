@@ -1,9 +1,11 @@
 package com.smartlibrary.client.feign;
 
-import com.smartlibrary.client.dto.BookDTO;
+import com.smartlibrary.client.dto.BookDto;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+
+import java.util.List;
 
 /**
  * Client Feign pour appeler le microservice Book
@@ -18,5 +20,8 @@ public interface BookClient {
      * Appel REST vers Book Service
      */
     @GetMapping("/books/{isbn}")
-    BookDTO getBookByIsbn(@PathVariable("isbn") String isbn);
+    BookDto getBookByIsbn(@PathVariable("isbn") String isbn);
+
+    @GetMapping("/books")
+    List<BookDto> getAllBooks();
 }

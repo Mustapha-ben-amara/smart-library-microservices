@@ -3,14 +3,18 @@ package com.smartlibrary.client.dto;
 /**
  * DTO représentant un livre venant du Book Service
  */
-public class BookDTO {
+public class BookDto {
 
     private String isbn;
     private String title;
 
-    public BookDTO() {
+    public BookDto() {
     }
 
+    public BookDto(String isbn, String title) {
+        this.isbn = isbn;
+        this.title = title;
+    }
     public String getIsbn() {
         return isbn;
     }
@@ -27,3 +31,6 @@ public class BookDTO {
         this.title = title;
     }
 }
+
+
+
