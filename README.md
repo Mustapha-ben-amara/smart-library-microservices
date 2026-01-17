@@ -1,7 +1,7 @@
 
 # Smart Library - Microservices Project
 
-##📌 Description
+## Description
 Smart Library est un projet vitrine pour démontrer vos compétences en développement Java Spring Boot, microservices et communication inter-services via Feign.  
 Le projet est composé de deux microservices principaux :
 - **Book Service** : Gère les informations sur les livres.
@@ -16,26 +16,7 @@ Le projet inclut :
 
 ---
 
-##📌 Structure du projet
-
-smart-library-microservices/
-├─ book-service/ # Microservice Livre
-│ ├─ src/main/java/com/smartlibrary/book/
-│ │ ├─ Book.java
-│ │ ├─ BookRepository.java
-│ │ └─ DataInitializer.java
-│ └─ pom.xml
-├─ client-service/ # Microservice Client
-│ ├─ src/main/java/com/smartlibrary/client/
-│ │ ├─ Client.java
-│ │ ├─ ClientRepository.java
-│ │ ├─ ClientController.java
-│ │ └─ BookClient.java
-│ └─ pom.xml
-└─ README.md
----
-
-## 📌Prérequis
+## Prérequis
 - Java 17
 - Maven
 - IDE IntelliJ ou Eclipse
@@ -43,7 +24,7 @@ smart-library-microservices/
 
 ---
 
-##📌 Lancer le projet
+📌 Lancer le projet
 
 1. Cloner le repository :  
 ```bash
@@ -72,7 +53,7 @@ Port par défaut : 8081
 Vérifier santé : http://localhost:8081/actuator/health
  → {"status":"UP"}
 
-## 📌Tester avec Postman
+📌Tester avec Postman
 
 Récupérer la liste des livres pour un client :
 
@@ -87,7 +68,7 @@ Exemple de réponse :
   {"isbn":"ISBN-003","title":"Effective Java"}
 ]
 
-## 📌Fonctionnalités
+📌Fonctionnalités
 
 Microservices séparés pour Book et Client
 
