@@ -1,7 +1,6 @@
 package com.smartlibrary.client.controller;
 
 import com.smartlibrary.client.dto.BookDto;
-import com.smartlibrary.client.feign.BookClient;
 import com.smartlibrary.client.service.ClientService;
 import org.springframework.web.bind.annotation.*;
 
