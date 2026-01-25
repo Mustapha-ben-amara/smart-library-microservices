@@ -12,7 +12,7 @@ import java.util.List;
  */
 @FeignClient(
         name = "book-service",
-        url = "http://localhost:8082"
+        fallback = BookClientFallback.class
 )
 public interface BookClient {
 
@@ -23,5 +23,8 @@ public interface BookClient {
     BookDto getBookByIsbn(@PathVariable("isbn") String isbn);
 
     @GetMapping("/books")
-    List<BookDto> getAllBooks();
+    List<BookDto> getBooks();
 }
+
+
+

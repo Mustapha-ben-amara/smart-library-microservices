@@ -5,28 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="39ae2c22-4094-4c31-ae95-588da9900990" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/eureka-server/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-server/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-server/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-server/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-server/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-server/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-server/src/main/java/com/smartlibrary/eureka/EurekaServerApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-server/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-server/src/test/java/com/smartlibrary/eureka/EurekaServerApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-service/src/main/java/com/smartlibrary/client/feign/BookClientFallback.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/book-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/client-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-service/src/main/java/com/smartlibrary/client/feign/BookClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-service/src/main/java/com/smartlibrary/client/feign/BookClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-service/src/main/java/com/smartlibrary/client/service/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/client-service/src/main/java/com/smartlibrary/client/service/ClientService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -72,7 +67,7 @@
       <recent name="C:\Users\Most Amr\Documents\smart-library-microservices" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ClientServiceApplication">
+  <component name="RunManager" selected="Application.BookServiceApplication">
     <configuration name="ApiGatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.smartlibrary.api_gateway.ApiGatewayApplication" />
       <module name="api-gateway" />
@@ -140,11 +135,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BookServiceApplication" />
         <item itemvalue="Application.ClientServiceApplication" />
         <item itemvalue="Application.ApiGatewayApplication" />
-        <item itemvalue="Application.ConfigServerApplication" />
-        <item itemvalue="Application.BookServiceApplication" />
         <item itemvalue="Application.EurekaServerApplication" />
+        <item itemvalue="Application.ConfigServerApplication" />
       </list>
     </recent_temporary>
   </component>

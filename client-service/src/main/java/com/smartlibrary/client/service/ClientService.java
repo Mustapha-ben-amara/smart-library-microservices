@@ -30,6 +30,6 @@ public class ClientService {
 
 
     public List<BookDto> getAvailableBooks() {
-        return bookClient.getAllBooks();
+        return bookClient.getBooks();
     }
 }
