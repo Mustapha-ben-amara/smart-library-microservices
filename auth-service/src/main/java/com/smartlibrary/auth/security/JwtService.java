@@ -20,19 +20,23 @@ public class JwtService {
     private final String secret = "smartlibrary-super-secret-key-2026-secure-jwt123456";
 
     private Key getSigningKey() {
-        // convertit ton secret en byte[] et génère une Key compatible HS256
+        // convertit le secret en byte[] et génère une Key compatible HS256
         return Keys.hmacShaKeyFor(secret.getBytes(StandardCharsets.UTF_8));
     }
 
-    public String generateToken(String username) {
+
+
+    public String generateToken(String username, String role) {
+
         return Jwts.builder()
                 .setSubject(username)
+                .claim("role", role)
                 .setIssuedAt(new Date())
-                .setExpiration(new Date(System.currentTimeMillis() + 3600000)) // 1h
+                .setExpiration(new Date(System.currentTimeMillis() + 3600000))
                 .signWith(getSigningKey(), SignatureAlgorithm.HS256)
                 .compact();
-    }
 
+    }
 
 
 }

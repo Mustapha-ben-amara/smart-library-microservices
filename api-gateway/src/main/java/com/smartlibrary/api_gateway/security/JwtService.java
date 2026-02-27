@@ -4,6 +4,7 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.security.Key;
@@ -11,12 +12,15 @@ import java.security.Key;
 @Service
 public class JwtService {
 
-    private final String SECRET_KEY = "smartlibrary-super-secret-key-2026-secure-jwt123456";
+    @Value("${jwt.secret}")
+    private String secret;
+
+   // private final String SECRET_KEY = "smartlibrary-super-secret-key-2026-secure-jwt123456";
 
 
 
     private Key getSigningKey() {
-        return Keys.hmacShaKeyFor(SECRET_KEY.getBytes());
+        return Keys.hmacShaKeyFor(secret.getBytes());
     }
     public String extractUsername(String token) {
         return extractAllClaims(token).getSubject();
@@ -41,5 +45,9 @@ public class JwtService {
                 .getBody();
     }
 
+    public String extractRole(String token) {
+        return extractAllClaims(token).get("role", String.class);
+    }
 
 }
+

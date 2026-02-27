@@ -2,26 +2,7 @@ package com.smartlibrary.auth.controller;
 
 import com.smartlibrary.auth.dto.LoginRequest;
 import org.springframework.web.bind.annotation.*;
-/*
-@RestController
-@RequestMapping("/auth")
-public class AuthController {
 
-    @PostMapping("/login")
-    public String login(@RequestBody LoginRequest request) {
-
-        // VITRINE : user en dur
-        if ("admin".equals(request.getUsername()) &&
-                "admin123".equals(request.getPassword())) {
-
-            return "JWT_WILL_BE_HERE";
-        }
-
-        throw new RuntimeException("Invalid credentials");
-    }
-}
-
-*/
 
 
 import com.smartlibrary.auth.dto.LoginRequest;
@@ -43,9 +24,8 @@ public class AuthController {
     @PostMapping("/login")
     public Map<String, String> login(@RequestBody LoginRequest request) {
 
-
-        String token = jwtService.generateToken(request.getUsername());
-
+        String role = request.getUsername().equals("admin") ? "ADMIN" : "USER";
+        String token = jwtService.generateToken(request.getUsername(), role);
         return Map.of("token", token);
     }
 }

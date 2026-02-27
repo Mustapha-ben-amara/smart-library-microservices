@@ -40,10 +40,24 @@ public class JwtAuthenticationFilter implements GlobalFilter, Ordered {
 
         String token = authHeader.substring(7);
 
+
         if (!jwtService.isTokenValid(token)) {
             exchange.getResponse().setStatusCode(HttpStatus.UNAUTHORIZED);
             return exchange.getResponse().setComplete();
         }
+
+// ON EXTRAIT LE ROLE ICI
+        String role = jwtService.extractRole(token);
+
+
+
+        if (path.contains("/admin") && !"ADMIN".equals(role)) {
+            exchange.getResponse().setStatusCode(HttpStatus.FORBIDDEN);
+            return exchange.getResponse().setComplete();
+        }
+
+
+
 
         String username = jwtService.extractUsername(token);
 
@@ -58,4 +72,6 @@ public class JwtAuthenticationFilter implements GlobalFilter, Ordered {
     public int getOrder() {
         return -1;
     }
+
+
 }

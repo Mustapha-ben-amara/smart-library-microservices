@@ -42,4 +42,9 @@ public class BookController {
     public Book getByIsbn(@PathVariable String isbn) {
         return bookService.findByIsbn(isbn);
     }
+
+    @GetMapping("/admin/test")
+    public String adminTest() {
+        return "ADMIN ACCESS OK";
+    }
 }
