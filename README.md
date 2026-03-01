@@ -1,110 +1,114 @@
 
 # Smart Library – Microservices Architecture (Spring Boot)
-📌 Description
+## 📌 Description
 
 Smart Library est un projet vitrine backend démontrant une architecture microservices complète basée sur Spring Boot.
 
-Le projet met en œuvre :
+## Le projet met en œuvre :
 
-Architecture microservices
+- Architecture microservices
 
-API Gateway centralisée
+- API Gateway centralisée
 
-Service Discovery avec Netflix Eureka
+- Service Discovery avec Netflix Eureka
 
-Sécurité centralisée avec JWT
+- Sécurité centralisée avec JWT
 
-Gestion des rôles (USER / ADMIN)
+- Gestion des rôles (USER / ADMIN)
 
-Communication inter-services via OpenFeign
+ -Communication inter-services via OpenFeign
 
-Pagination REST professionnelle (Pageable)
+- Pagination REST professionnelle (Pageable)
 
-Base H2 embarquée
+- Base H2 embarquée
 
-Initialisation automatique des données
+- Initialisation automatique des données
 
-Architecture prête pour Docker et CI/CD
+- Architecture prête pour Docker et CI/CD
 
-🏗️ Architecture
+## 🏗️ Architecture
 
-Le système est composé de :
+## Le système est composé de :
 
 1️⃣ API Gateway
 
-Centralisation de la sécurité
+ Centralisation de la sécurité
 
-Validation des JWT
+ Validation des JWT
 
-Filtrage des requêtes
+ Filtrage des requêtes
 
-Routage vers les microservices
+ Routage vers les microservices
 
 2️⃣ Auth Service
 
-Authentification des utilisateurs
+ Authentification des utilisateurs
 
-Génération de JWT
+ Génération de JWT
 
-Gestion des rôles (USER / ADMIN)
+ Gestion des rôles (USER / ADMIN)
 
 3️⃣ Book Service
 
-Gestion des livres
+ Gestion des livres
 
-Pagination dynamique
+ Pagination dynamique
 
-Protection par rôles
+ Protection par rôles
 
 4️⃣ Client Service
 
-Gestion des clients
+ Gestion des clients
 
-Appel distant vers Book Service via Feign
+ Appel distant vers Book Service via Feign
 
 5️⃣ Service Discovery
 
-Enregistrement automatique des services via Eureka
+ Enregistrement automatique des services via Eureka
 
-🔐 Sécurité
+## 🔐 Sécurité
 
-Le projet implémente :
+### - Le projet implémente :
 
-Authentification JWT
+ Authentification JWT
 
-Validation du token au niveau API Gateway
+ Validation du token au niveau API Gateway
 
-Autorisation basée sur les rôles
+ Autorisation basée sur les rôles
 
-Protection des routes sensibles (ADMIN uniquement)
+ Protection des routes sensibles (ADMIN uniquement)
 
-Exemple :
+### - Exemple :
 
 GET /books?page=0&size=5
+
 Authorization: Bearer <JWT>
-📦 Pagination REST
 
-Le Book Service implémente une pagination professionnelle via Pageable.
+## 📦 Pagination REST
 
-Exemple :
+ Le Book Service implémente une pagination professionnelle via Pageable.
+
+### - Exemple :
 GET /books?page=1&size=5&sort=title,asc
 
-Fonctionnement technique :
-Utilisation de LIMIT et OFFSET au niveau SQL
-Réponse incluant métadonnées (totalElements, totalPages, etc.)
-Configuration d’une taille maximale sécurisée
+- Fonctionnement technique :
 
-⚙️ Prérequis
+ Utilisation de LIMIT et OFFSET au niveau SQL
+ Réponse incluant métadonnées (totalElements, totalPages, etc.)
+ Configuration d’une taille maximale sécurisée
+
+## ⚙️ Prérequis
 - Java 17
 - Maven
 - IDE IntelliJ ou Eclipse
 - Postman ou curl
 
-🚀 Lancer le projet
+## 🚀 Lancer le projet
 1️⃣ Cloner le repository
 git clone https://github.com/Mustapha-ben-amara/smart-library-microservices.git
 cd smart-library-microservices
 2️⃣ Lancer Eureka Server
+
 cd discovery-service
 mvn spring-boot:run
 
@@ -112,6 +116,7 @@ Port par défaut : 8761
 Console : http://localhost:8761
 
 3️⃣ Lancer Book Service
+
 cd book-service
 mvn spring-boot:run
 
@@ -127,11 +132,17 @@ Port par défaut : 8081
 5️⃣ Lancer Auth Service
 cd auth-service
 mvn spring-boot:run
+
 6️⃣ Lancer API Gateway
+
 cd api-gateway
+
 mvn spring-boot:run
-🧪 Tests avec Postman
-🔑 Authentification
+
+## 🧪 Tests avec Postman
+
+### 🔑 Authentification
+
 POST /auth/login
 
 Body :
@@ -146,45 +157,49 @@ Retour :
 {
   "token": "eyJhbGciOiJIUzI1NiJ9..."
 }
-📚 Accès aux livres
+
+## 📚 Accès aux livres
+
 GET /books?page=0&size=5
+
 Authorization: Bearer <TOKEN>
-🧠 Compétences démontrées
 
-Architecture microservices
+## 🧠 Compétences démontrées
 
-Spring Security + JWT
+- Architecture microservices
 
-API Gateway sécurisée
+- Spring Security + JWT
 
-Communication inter-services
+- API Gateway sécurisée
 
-Pagination optimisée
+- Communication inter-services
 
-Gestion des rôles
+- Pagination optimisée
 
-Structuration propre d’un projet distribué
+- Gestion des rôles
 
-🔮 Évolutions possibles
+- Structuration propre d’un projet distribué
 
-Refresh Token
+## 🔮 Évolutions possibles
 
-Docker Compose
+ Refresh Token
 
-Base PostgreSQL
+ Docker Compose
 
-Tests unitaires
+ Base PostgreSQL
 
-Observabilité (logs centralisés)
+ Tests unitaires
 
-🎯 Objectif du projet
+ Observabilité (logs centralisés)
 
-Projet vitrine démontrant un niveau backend confirmé avec :
+## 🎯 Objectif du projet
 
-Sécurité maîtrisée
+ Projet vitrine démontrant un niveau backend confirmé avec :
 
-Architecture distribuée
+ Sécurité maîtrisée
 
-Code structuré
+ Architecture distribuée
 
-Bonnes pratiques REST
+ Code structuré
+
+ Bonnes pratiques REST
