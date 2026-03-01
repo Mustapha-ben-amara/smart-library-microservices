@@ -16,7 +16,7 @@ Smart Library est un projet vitrine backend démontrant une architecture microse
 
 - Gestion des rôles (USER / ADMIN)
 
- -Communication inter-services via OpenFeign
+- Communication inter-services via OpenFeign
 
 - Pagination REST professionnelle (Pageable)
 
@@ -182,24 +182,24 @@ Authorization: Bearer <TOKEN>
 
 ## 🔮 Évolutions possibles
 
- Refresh Token
+ - Refresh Token
 
- Docker Compose
+ - Docker Compose
 
- Base PostgreSQL
+ - Base PostgreSQL
 
- Tests unitaires
+ - Tests unitaires
 
- Observabilité (logs centralisés)
+ - Observabilité (logs centralisés)
 
 ## 🎯 Objectif du projet
 
- Projet vitrine démontrant un niveau backend confirmé avec :
+#### Projet vitrine démontrant un niveau backend confirmé avec :
 
- Sécurité maîtrisée
+ - Sécurité maîtrisée
 
- Architecture distribuée
+ - Architecture distribuée
 
- Code structuré
+ - Code structuré
 
- Bonnes pratiques REST
+ - Bonnes pratiques REST
