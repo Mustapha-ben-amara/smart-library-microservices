@@ -1,82 +1,190 @@
 
-# Smart Library - Microservices Project
+# Smart Library – Microservices Architecture (Spring Boot)
+📌 Description
 
-## Description
-Smart Library est un projet vitrine pour démontrer vos compétences en développement Java Spring Boot, microservices et communication inter-services via Feign.  
-Le projet est composé de deux microservices principaux :
-- **Book Service** : Gère les informations sur les livres.
-- **Client Service** : Gère les clients et récupère la liste des livres via Feign depuis le Book Service.
+Smart Library est un projet vitrine backend démontrant une architecture microservices complète basée sur Spring Boot.
 
-Le projet inclut :
-- Découpage en microservices
-- Communication inter-services avec Feign
-- Initialisation des données avec `CommandLineRunner`
-- Tests via Postman ou curl
-- Architecture prête pour Docker et CI/CD
-- 
+Le projet met en œuvre :
 
----
+Architecture microservices
 
-## Prérequis
+API Gateway centralisée
+
+Service Discovery avec Netflix Eureka
+
+Sécurité centralisée avec JWT
+
+Gestion des rôles (USER / ADMIN)
+
+Communication inter-services via OpenFeign
+
+Pagination REST professionnelle (Pageable)
+
+Base H2 embarquée
+
+Initialisation automatique des données
+
+Architecture prête pour Docker et CI/CD
+
+🏗️ Architecture
+
+Le système est composé de :
+
+1️⃣ API Gateway
+
+Centralisation de la sécurité
+
+Validation des JWT
+
+Filtrage des requêtes
+
+Routage vers les microservices
+
+2️⃣ Auth Service
+
+Authentification des utilisateurs
+
+Génération de JWT
+
+Gestion des rôles (USER / ADMIN)
+
+3️⃣ Book Service
+
+Gestion des livres
+
+Pagination dynamique
+
+Protection par rôles
+
+4️⃣ Client Service
+
+Gestion des clients
+
+Appel distant vers Book Service via Feign
+
+5️⃣ Service Discovery
+
+Enregistrement automatique des services via Eureka
+
+🔐 Sécurité
+
+Le projet implémente :
+
+Authentification JWT
+
+Validation du token au niveau API Gateway
+
+Autorisation basée sur les rôles
+
+Protection des routes sensibles (ADMIN uniquement)
+
+Exemple :
+
+GET /books?page=0&size=5
+Authorization: Bearer <JWT>
+📦 Pagination REST
+
+Le Book Service implémente une pagination professionnelle via Pageable.
+
+Exemple :
+GET /books?page=1&size=5&sort=title,asc
+
+Fonctionnement technique :
+Utilisation de LIMIT et OFFSET au niveau SQL
+Réponse incluant métadonnées (totalElements, totalPages, etc.)
+Configuration d’une taille maximale sécurisée
+
+⚙️ Prérequis
 - Java 17
 - Maven
 - IDE IntelliJ ou Eclipse
 - Postman ou curl
 
----
-
-📌 Lancer le projet
-
-1. Cloner le repository :  
-```bash
+🚀 Lancer le projet
+1️⃣ Cloner le repository
 git clone https://github.com/Mustapha-ben-amara/smart-library-microservices.git
 cd smart-library-microservices
+2️⃣ Lancer Eureka Server
+cd discovery-service
+mvn spring-boot:run
 
-2-Lancer Book Service :
+Port par défaut : 8761
+Console : http://localhost:8761
 
+3️⃣ Lancer Book Service
 cd book-service
 mvn spring-boot:run
 
-
 Port par défaut : 8082
+Health check : http://localhost:8082/actuator/health
 
-Vérifier santé : http://localhost:8082/actuator/health
- → {"status":"UP"}
-
-Lancer Client Service :
-
-cd ../client-service
+4️⃣ Lancer Client Service
+cd client-service
 mvn spring-boot:run
-
 
 Port par défaut : 8081
 
-Vérifier santé : http://localhost:8081/actuator/health
- → {"status":"UP"}
+5️⃣ Lancer Auth Service
+cd auth-service
+mvn spring-boot:run
+6️⃣ Lancer API Gateway
+cd api-gateway
+mvn spring-boot:run
+🧪 Tests avec Postman
+🔑 Authentification
+POST /auth/login
 
-📌Tester avec Postman
+Body :
 
-Récupérer la liste des livres pour un client :
+{
+  "username": "admin",
+  "password": "admin"
+}
 
-GET http://localhost:8081/clients/client/books
+Retour :
 
+{
+  "token": "eyJhbGciOiJIUzI1NiJ9..."
+}
+📚 Accès aux livres
+GET /books?page=0&size=5
+Authorization: Bearer <TOKEN>
+🧠 Compétences démontrées
 
-Exemple de réponse :
+Architecture microservices
 
-[
-  {"isbn":"ISBN-001","title":"Clean Code"},
-  {"isbn":"ISBN-002","title":"Spring in Action"},
-  {"isbn":"ISBN-003","title":"Effective Java"}
-]
+Spring Security + JWT
 
-📌Fonctionnalités
+API Gateway sécurisée
 
-Microservices séparés pour Book et Client
+Communication inter-services
 
-Communication inter-services via Feign
+Pagination optimisée
 
-Initialisation automatique de données avec CommandLineRunner
+Gestion des rôles
 
-Architecture prête pour CI/CD et Docker
+Structuration propre d’un projet distribué
 
-Facilement extensible pour ajouter d’autres services (ex: Commande, Stock)
+🔮 Évolutions possibles
+
+Refresh Token
+
+Docker Compose
+
+Base PostgreSQL
+
+Tests unitaires
+
+Observabilité (logs centralisés)
+
+🎯 Objectif du projet
+
+Projet vitrine démontrant un niveau backend confirmé avec :
+
+Sécurité maîtrisée
+
+Architecture distribuée
+
+Code structuré
+
+Bonnes pratiques REST

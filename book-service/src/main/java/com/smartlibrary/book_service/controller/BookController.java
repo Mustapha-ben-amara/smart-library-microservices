@@ -2,6 +2,8 @@ package com.smartlibrary.book_service.controller;
 
 import com.smartlibrary.book_service.entity.Book;
 import com.smartlibrary.book_service.service.BookService;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -30,11 +32,15 @@ public class BookController {
     /**
      * Lister tous les livres
      */
-    @GetMapping
-    public List<Book> getAll() {
-        return bookService.findAll();
-    }
+   // @GetMapping
+   // public List<Book> getAll() {
+      //  return bookService.findAll();
+ // }
 
+    @GetMapping
+    public Page<Book> getAll(Pageable pageable) {
+        return bookService.findAll(pageable);
+    }
     /**
      * Trouver un livre par ISBN
      */

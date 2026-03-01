@@ -3,6 +3,8 @@ package com.smartlibrary.book_service.service;
 import com.smartlibrary.book_service.entity.Book;
 import com.smartlibrary.book_service.repository.BookRepository;
 import org.springframework.stereotype.Service;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 import java.util.List;
 
@@ -28,10 +30,14 @@ public class BookService {
     /**
      * Récupérer tous les livres
      */
-    public List<Book> findAll() {
-        return bookRepository.findAll();
-    }
+   // public List<Book> findAll() {
+    //    return bookRepository.findAll();
+  //  }
 
+
+    public Page<Book> findAll(Pageable pageable) {
+        return bookRepository.findAll(pageable);
+    }
     /**
      * Récupérer un livre par ISBN
      */
